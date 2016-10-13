@@ -1,0 +1,19 @@
+### Logfile & global variable initialization
+
+type    = Single
+ptype   = RegExp
+pattern = (SEC_STARTUP|SEC_RESTART|SEC_SHUTDOWN)
+desc    = SEC internal message
+action  = assign %mailto    root@localhost;                      \
+          assign %logfile   /var/log/sec;                        \
+          shellcmd /bin/echo -e -- "\n%t %s : $0\n" >> %logfile; \
+          add SECPROD %t "starting : %s / $0"
+
+### Daily SEC report
+
+type    = Calendar
+time    = 44 4 * * *
+desc    = Daily report
+action  = add SECPROD %t "Mailing report : '%s' to %mailto";     \
+          report SECPROD /bin/mail -s "SEC REPORT: %s" %mailto
+

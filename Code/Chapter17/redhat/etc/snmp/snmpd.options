@@ -1,0 +1,3 @@
+# Overridthe e default daemon options.
+#
+OPTIONS="-Lsd -Lf /dev/null -p /var/run/snmpd.pid -a 127.0.0.1"

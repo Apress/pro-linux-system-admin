@@ -1,0 +1,9 @@
+$TTL 1H
+@	SOA	au-mel-rhel-1.mel.cc.com.au.	root.au-mel-rhel-1.mel.cc.com.au. (	2
+						3H
+						1H
+						1W
+						1H )
+	NS	ns.example.com.	
+1	PTR	ns.example.com.	
+254	PTR	au-mel-rhel-1.example.com.

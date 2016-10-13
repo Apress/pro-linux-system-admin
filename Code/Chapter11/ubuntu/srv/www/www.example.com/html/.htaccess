@@ -1,0 +1,5 @@
+AuthType basic
+AuthBasicProvider file
+AuthUserFile /srv/www/www.example.com/htpasswd
+AuthName "Restricted Area"
+Require valid-user

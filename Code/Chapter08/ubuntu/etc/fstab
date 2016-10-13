@@ -1,0 +1,14 @@
+# /etc/fstab: static file system information.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+proc            /proc           proc    defaults        0       0
+# /dev/mapper/au--mel--ubuntu--1-root
+UUID=e9e48791-dd89-4bf7-921e-f6d460f7ca24 /               ext3    relatime,errors=remount-ro 0       1
+# /dev/sda1
+UUID=74bce18f-6f8f-4f4c-be91-4ce38e2bff8e /boot           ext3    relatime        0       2
+# /dev/mapper/au--mel--ubuntu--1-swap_1
+UUID=83f01bff-2cc4-4f4a-abe1-0b9210c5dfa8 none            swap    sw              0       0
+/dev/scd0       /media/cdrom0   udf,iso9660 user,noauto,exec,utf8 0       0
+/dev/fd0        /media/floppy0  auto    rw,user,noauto,exec,utf8 0       0
+# /dev/mapper/raid--volume-www
+UUID=c0f3d1ef-c201-4fae-bb35-6a21bfcafa0e  /srv/www  ext3  defaults  0  0

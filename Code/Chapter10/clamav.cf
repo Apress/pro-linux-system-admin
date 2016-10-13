@@ -1,0 +1,4 @@
+loadplugin ClamAV clamav.pm
+full CLAMAV eval:check_clamav()
+describe CLAMAV Clam AntiVirus detected a virus
+score CLAMAV 10

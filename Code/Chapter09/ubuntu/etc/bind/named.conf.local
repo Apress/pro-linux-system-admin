@@ -1,0 +1,40 @@
+//
+// Do any local configuration here
+//
+
+// Consider adding the 1918 zones here, if they are not used in your
+// organization
+//include "/etc/bind/zones.rfc1918";
+
+zone "example.com" {
+	type master;
+	notify yes;
+	allow-transfer {
+		192.168.0.2;
+	};
+	allow-update {
+		key dynamic-update-key;
+	};
+	file "example.com.db";
+};
+
+zone "0.168.192.in-addr.arpa" {
+	type master;
+	notify yes;
+	allow-transfer {
+		192.168.0.2;
+	};
+	allow-update {
+		key dynamic-update-key;
+	};
+	file "192.168.0.db";
+};
+
+// Slave server zone definition.
+// zone "example.com" {
+//     type slave;
+//     masters {
+//         192.168.0.1;
+//     };
+//     file "example.com.db";
+// };

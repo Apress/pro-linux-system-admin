@@ -1,0 +1,18 @@
+$TTL 1H	
+@	SOA	ns	root.au-mel-rhel-1.m (	4
+						3H
+						1H
+						1W
+						1H )
+		IN	1H	MX	10	mail	
+		NS	ns	
+ns	IN	1H	A	192.168.0.1	
+mail	IN	1H	A	192.168.0.254	
+au-mel-rhel-1	IN	1H	A	192.168.0.254	
+smtp	IN	1H	CNAME	mail	
+pop	IN	1H	CNAME	mail	
+au-mel-rhel-1	IN	1H	A	192.168.0.254	
+imap	IN	1H	CNAME	mail	
+www	IN	1H	CNAME	au-mel-rhel-1	
+au-mel-rhel-1	IN	1H	A	192.168.0.254	
+sql	IN	1H	CNAME	au-mel-rhel-1
